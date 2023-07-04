@@ -34,11 +34,19 @@ a {
 .h2 {
   color: #48555b;
   font-size: 18px;
-  font-family: OpenSans;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 2.306px;
+}
+
+.h3 {
+  color: #48555b;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.427px;
 }
 
 /* ========= HEADER ===========*/
@@ -53,10 +61,6 @@ header {
   background: url('../img/bg-header.jpg') lightgray 0px 0px / 100% 100%
     no-repeat;
   backdrop-filter: blur(2px);
-  /* background-image: url('../img/bg-header.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 .header__content {
@@ -217,4 +221,140 @@ header {
   font-weight: 800;
   line-height: 29px;
   letter-spacing: 0.188px;
+}
+
+/* ========= SERVICES ============*/
+
+.services__hero {
+  display: flex;
+}
+
+.services__h2 {
+  position: relative;
+  white-space: nowrap;
+  margin-right: auto;
+}
+
+.services__h2::after {
+  position: absolute;
+  content: '';
+  top: 40px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #00a4e5;
+}
+
+.services__hero {
+  margin-bottom: 75px;
+}
+
+.services__hero .services__desc {
+  max-width: 400px;
+  margin-right: 35px;
+  padding-left: 30px;
+}
+
+.services__desc {
+  color: #48555b;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.188px;
+}
+
+.services__link {
+  background-color: #00a4e5;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  height: max-content;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.services__card {
+  padding: 38px 23px;
+  border: 1px solid #e6e6e6;
+}
+
+/* ========= TOUCH ============*/
+
+.touch {
+  background: #171819;
+}
+
+.touch__container {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  background-image: url('../img/bg-city.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.touch__h2 {
+  color: #48555b;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  margin-bottom: 35px;
+}
+
+.touch__link {
+  background-color: #00a4e5;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-family: OpenSans;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  height: max-content;
+  margin: 0 auto;
+}
+
+.touch__form-wrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.touch__h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.846px;
+}
+
+.form {
+  display: flex;
+}
+
+.form button {
+  border: 0;
+}
+
+.form__input {
+  border: 0;
 }
