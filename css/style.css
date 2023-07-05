@@ -3,6 +3,7 @@ html {
   box-sizing: border-box;
   font-family: OpenSans;
   font-style: normal;
+  line-height: normal;
   background: #fff;
 }
 
@@ -18,6 +19,16 @@ html {
 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.3s ease-in-out, outline 3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #00a4e5;
+}
+
+a:focus {
+  outline: 1px solid #00a4e5;
 }
 
 .container {
@@ -278,6 +289,12 @@ header {
   height: max-content;
 }
 
+.services__link:hover {
+  color: #00a4e5;
+  background-color: #fff;
+  outline: 1px solid #00a4e5;
+}
+
 .services__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -330,6 +347,14 @@ header {
   padding: 10px 20px;
   height: max-content;
   margin: 0 auto;
+  transition: color 0.3s ease-in-out, outline 3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.touch__link:hover {
+  color: #00a4e5;
+  background-color: transparent;
+  outline: 1px solid #00a4e5;
 }
 
 .touch__form-wrapper {
@@ -356,5 +381,89 @@ header {
 }
 
 .form__input {
+  padding: 0px 18px;
   border: 0;
+}
+
+/* ========= FOOTER ============*/
+
+.footer {
+  background: #141a20;
+  color: #fff;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__h2 {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.846px;
+  margin-bottom: 20px;
+}
+
+.footer__company img {
+  margin-bottom: 20px;
+}
+
+.footer__desc {
+  font-size: 11px;
+  line-height: 19px;
+  letter-spacing: 0.85px;
+  max-width: 250px;
+}
+
+.footer__nav-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0.846px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__contacts address {
+  max-width: 140px;
+}
+
+.footer__social svg {
+  fill: #fff;
+  transition: fill 0.3s ease-in-out;
+}
+
+.footer__social svg:hover {
+  fill: #00a4e5;
+}
+
+.footer__social a:focus {
+  outline: 0;
+}
+
+.footer__social a:focus svg {
+  fill: #00a4e5;
+}
+
+.footer__copy {
+  text-align: center;
+  padding: 20px;
+  background: #171819;
 }
