@@ -209,15 +209,15 @@ header {
 }
 
 .card1 {
-  background-image: url('/img/plan-bg.jpg');
+  background-image: url('../img/plan-bg.jpg');
 }
 
 .card2 {
-  background-image: url('/img/manage-bg.jpg');
+  background-image: url('../img/manage-bg.jpg');
 }
 
 .card3 {
-  background-image: url('/img/build-bg.jpg');
+  background-image: url('../img/build-bg.jpg');
 }
 
 .about__h3 {
