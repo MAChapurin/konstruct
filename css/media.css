@@ -1,0 +1,114 @@
+@media (max-width: 850px) {
+  .nav__container .nav__logo {
+    display: none;
+  }
+
+  .nav__container {
+    justify-content: space-evenly;
+  }
+
+  .about__content {
+    flex-direction: column;
+  }
+
+  .about__left {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .about__right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    min-height: 500px;
+    padding: 25px;
+  }
+
+  .header__content {
+    min-height: 500px;
+  }
+
+  .h1 {
+    font-size: 40px;
+  }
+
+  .main .nav__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav a {
+    margin: 0;
+  }
+
+  .about {
+    padding: 25px 0;
+  }
+
+  .about__left {
+    width: 100%;
+  }
+  .about__desc {
+    margin: 0 auto;
+  }
+
+  .about__right {
+    flex-wrap: wrap;
+  }
+
+  .services__hero {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .services__desc {
+    margin-bottom: 20px;
+  }
+
+  .services__h2 {
+    margin-bottom: 25px;
+  }
+
+  .services__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .touch__container {
+    min-height: 400px;
+  }
+
+  .touch__form-wrapper {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer__container {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media(max-width:550px) {
+  header {
+    min-height: 300px;
+  }
+  .header__content {
+    min-height: 300px;
+  }
+
+  .h1 {
+    font-size: 30px;
+  }
+
+  .main .nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
