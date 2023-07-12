@@ -60,6 +60,30 @@ a:focus {
   letter-spacing: 0.427px;
 }
 
+/* ========= ANIMATIONS ===========*/
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appearingNav {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 /* ========= HEADER ===========*/
 
 header {
@@ -81,6 +105,10 @@ header {
   min-height: 768px;
 }
 
+.header__content img {
+  animation: appearing 1.5s 1;
+}
+
 .h1 {
   text-align: center;
   font-size: 60px;
@@ -90,6 +118,7 @@ header {
   line-height: normal;
   letter-spacing: 5.709px;
   align-self: center;
+  animation: appearing 1s 1;
 }
 
 .header__desc {
@@ -99,6 +128,7 @@ header {
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
+  animation: appearing 0.8s 1;
 }
 
 .header__link {
@@ -111,6 +141,7 @@ header {
   letter-spacing: 3.7px;
   cursor: pointer;
   margin: 0 auto;
+  animation: appearing 0.5s 1;
 }
 
 /* ========= NAVIGATION ============*/
@@ -134,6 +165,7 @@ header {
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1.091px;
+  animation: appearingNav 0.5s 1;
 }
 
 .nav__link:not(:last-child) {
@@ -142,6 +174,7 @@ header {
 
 .nav__logo {
   margin-right: auto;
+  animation: appearingNav 0.5s 1;
 }
 
 /* ========= ABOUT ============*/
@@ -188,6 +221,8 @@ header {
   line-height: normal;
   letter-spacing: 0.188px;
 }
+
+
 
 .about__desc span {
   color: #00a4e5;
