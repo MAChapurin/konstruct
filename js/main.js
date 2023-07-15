@@ -19,12 +19,27 @@ LINKS.forEach((link) => {
 
 
 const cb = (entries) => {
-  const {isIntersecting, target} = entries[0];
-  if(isIntersecting) {
-    target.classList.add('card-visible')
-  } else {
-    target.classList.remove('card-visible')
-  }
+  entries.forEach(el => {
+    const {isIntersecting, target
+    } = el;
+    if(isIntersecting) {
+      target.classList.add('card-visible')
+    } else {
+      target.classList.remove('card-visible')
+    }
+  })
+}
+
+const cb2 = (entries) => {
+  entries.forEach(el => {
+    const {isIntersecting, target
+    } = el;
+    if(isIntersecting) {
+      target.classList.add('title-visible')
+    } else {
+      target.classList.remove('title-visible')
+    }
+  })
 }
 
 const observer = new IntersectionObserver(
@@ -34,8 +49,17 @@ const observer = new IntersectionObserver(
   }
 );
 
-const cardsServices = document.querySelectorAll('.services__card, .about__card, h2, h3, .footer__link').forEach(el => {
+const observerTitle = new IntersectionObserver(
+  cb2,
+   {
+     threshold: 0.3,
+   }
+ );
+
+const cardsServices = document.querySelectorAll('.services__card, .about__card, .footer__link, .footer__contacts > *').forEach(el => {
   observer.observe(el)
 })
+
+observerTitle.observe(document.querySelector('.touch__h2'))
 
 

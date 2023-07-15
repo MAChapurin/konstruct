@@ -49,7 +49,6 @@ a:focus {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 2.306px;
-  opacity: 0;
 }
 
 .h3 {
@@ -352,6 +351,7 @@ header {
   line-height: 36px;
   letter-spacing: 0.15px;
   margin-bottom: 35px;
+  transition: color 0.3s ease;
 }
 
 .touch__link {
@@ -464,6 +464,7 @@ header {
   max-width: 140px;
 }
 
+
 .footer__social svg {
   fill: #fff;
   transition: fill 0.3s ease-in-out;
@@ -521,7 +522,25 @@ header {
   }
 }
 
+@keyframes appearingLetters {
+  0% {
+    color: #00a4e5;
+  }
+  100% {
+    color: red;
+  }
+}
+
 .card-visible {
   opacity: 1;
   animation: appearingCards 0.5s 1;
+}
+
+.touch__h2 span{
+  /* animation: appearingLetters 1s 1; */
+  transition: all s0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.title-visible {
+  animation: appearingCards 1s 1;
 }
