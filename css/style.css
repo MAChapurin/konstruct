@@ -49,6 +49,7 @@ a:focus {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 2.306px;
+  opacity: 0;
 }
 
 .h3 {
@@ -58,30 +59,6 @@ a:focus {
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.427px;
-}
-
-/* ========= ANIMATIONS ===========*/
-
-@keyframes appearing {
-  0% {
-    opacity: 0;
-    transform: translateY(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes appearingNav {
-  0% {
-    opacity: 0;
-    transform: translateX(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
 }
 
 /* ========= HEADER ===========*/
@@ -241,6 +218,11 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transform: scale(0);
+}
+
+.about__card.card-visible {
+  transform: scale(1);
 }
 
 .card1 {
@@ -335,6 +317,12 @@ header {
 .services__card {
   padding: 38px 23px;
   border: 1px solid #e6e6e6;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.services__card.card-visible {
+  opacity: 1;
 }
 
 /* ========= TOUCH ============*/
@@ -497,4 +485,43 @@ header {
   text-align: center;
   padding: 20px;
   background: #171819;
+}
+
+
+/* ========= ANIMATIONS ===========*/
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appearingNav {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes appearingCards {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-visible {
+  opacity: 1;
+  animation: appearingCards 0.5s 1;
 }

@@ -15,3 +15,27 @@ LINKS.forEach((link) => {
     });
   });
 });
+
+
+
+const cb = (entries) => {
+  const {isIntersecting, target} = entries[0];
+  if(isIntersecting) {
+    target.classList.add('card-visible')
+  } else {
+    target.classList.remove('card-visible')
+  }
+}
+
+const observer = new IntersectionObserver(
+ cb,
+  {
+    threshold: 0.3,
+  }
+);
+
+const cardsServices = document.querySelectorAll('.services__card, .about__card, h2, h3, .footer__link').forEach(el => {
+  observer.observe(el)
+})
+
+
